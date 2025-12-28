@@ -7,6 +7,7 @@ class Account{
     private:
         string firstname;
         string lastname;
+        string fullname;
         string phone_number;
         string NIC_number;
         string ethnicity;
@@ -23,8 +24,8 @@ class Account{
             this->password = password;
         }
             void name_assign();
-            void nic_check(int NIC_number);
-            void phone_number_check(int phone_number);
+            void nic_check(string NIC_number);
+            void phone_number_check(string phone_number);
             void password_check(string password);
             void update_details(int account_id);
             void delete_account(int account_id);
