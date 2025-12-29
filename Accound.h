@@ -1,10 +1,10 @@
-#include <iostream>
 #include <string>
+#include <fstream>
 
 using namespace std;
 
 class Account{
-    private:
+    public:
         string firstname;
         string lastname;
         string fullname;
@@ -14,7 +14,6 @@ class Account{
         string password;
         int account_id;
 
-    public:     
         Account(string name, string phone_number, string NIC_number, string ethnicity, string password){
             this->firstname = firstname;
             this->lastname = lastname;
@@ -31,4 +30,5 @@ class Account{
             void delete_account(int account_id);
             int account_id_assign();
             void account_details();
+            void load_details();
 };
