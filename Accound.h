@@ -1,10 +1,13 @@
 #include <string>
 #include <fstream>
+#include <vector>
 
 using namespace std;
 
 class Account{
     public:
+        static vector <string> arr;
+        static int i;
         string firstname;
         string lastname;
         string fullname;

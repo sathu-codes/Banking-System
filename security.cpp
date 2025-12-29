@@ -15,5 +15,4 @@ int strength_level(string pwd){
     
 }
 int check(string password){
-    
 }
