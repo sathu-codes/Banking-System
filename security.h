@@ -3,7 +3,6 @@
 
 using namespace std;
 
-
-int check();
-
 int strength_level(string password);
+
+int check(string password); 

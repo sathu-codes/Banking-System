@@ -8,6 +8,7 @@ class Account{
     public:
         static vector <string> arr;
         static int i;
+        static int account_id;
         string firstname;
         string lastname;
         string fullname;
@@ -15,7 +16,6 @@ class Account{
         string NIC_number;
         string ethnicity;
         string password;
-        int account_id;
 
         Account(string name, string phone_number, string NIC_number, string ethnicity, string password){
             this->firstname = firstname;
