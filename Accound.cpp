@@ -6,9 +6,8 @@
 
 using namespace std;
 
-void Account::load_details(){
+Account::Account(){
     fstream file("Account_details.txt",ios::out);
-
     while(getline(file,arr[i])){
         i++;
     }
@@ -17,7 +16,8 @@ void Account::load_details(){
 
 void Account::name_assign(){
     string full_name = firstname + " " + lastname;
-    fullname = full_name;
+    this->fullname = full_name;
+
 }
 void Account::nic_check(string NIC_number){
     fstream file("Account_details.txt",ios::in);
@@ -68,9 +68,21 @@ void Account::password_check(string password){
             cin>>password;
         }
     }
+    this->password=password;
+}
+int Account::account_id_assign(){
+    if(arr.empty()){
+        account_id = 1000;
+    }
+    else{
+        int u=i/7;
+        account_id=1001+u;
+    }
+    this->account_id=account_id;
 }
 void Account::update_details(int account_id){
     this->account_id=account_id;
+    int a=0;
     cout<<"Enter the psassword to continue: ";
     string pwd; 
     cin>>pwd;
@@ -145,32 +157,30 @@ void Account::update_details(int account_id){
 }
 void Account::delete_account(int account_id){
     this->account_id=account_id;
-    int d=0;
-    int e=0;
-    vector <string> temp_arr;
-    while(d<=i){
-        if(arr[d]=="Account ID:"+to_string(account_id)){
-            d=d+7;
+    cout<<"Enter the psassword to continue: ";
+    string pwd; 
+    cin>>pwd;
+    int res=check(pwd);
+    if(res==1){
+        int d=0;
+        int e=0;
+        vector <string> temp_arr;
+        while(d<=i){
+            if(arr[d]=="Account ID:"+to_string(account_id)){
+                d=d+7;
+            }
+            else{
+                temp_arr[e]=arr[d];
+                d++;
+                continue;
+            }
+            e++;
         }
-        else{
-            temp_arr[e]=arr[d];
-            d++;
-            continue;
+        fstream file("Account_details.txt",ios::out);
+        for(int f=0;f<=e;f++){
+                file<<temp_arr[f]<<endl;
         }
-        e++;
-    }
-    fstream file("Account_details.txt",ios::out);
-    for(int f=0;f<=e;f++){
-            file<<temp_arr[f]<<endl;
-    }
-}
-int Account::account_id_assign(){
-    if(arr.empty()){
-        account_id = 1000;
-    }
-    else{
-        int u=i/7;
-        account_id=1001+u;
+        file.close();
     }
 }
 void Account::account_details(){
