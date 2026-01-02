@@ -1,0 +1,14 @@
+Account ID:1000
+Full Name: sathu
+Phone Number:786756456
+NIC Number:200567889876
+Nationality
+Password:0987654321
+
+Account ID:1001
+Full Name: sathu
+Phone Number:765643234
+NIC Number:20098978675
+Nationality
+Password:0987654321
+

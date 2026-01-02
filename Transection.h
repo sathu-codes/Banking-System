@@ -1,6 +1,9 @@
+#ifndef TRANSECTION_H
+#define TRANSECTION_H
+
 #include <iostream>
 #include <string>
-#include "Accound.h"
+#include "accound.h"
 #include <vector>
 using namespace std;        
 
@@ -10,7 +13,7 @@ class transection{
         static int z;
         static int x;
     
-        transection(){
-        }
+        transection();
         void deposite_withrowal(int account_id,string password);
 };
+#endif

@@ -6,7 +6,7 @@
 using namespace std;
 
 int strength_level(string pwd){
-    if(pwd.length()<8){
+    if(pwd.length()>8){
         return 1;
     }
     else{
@@ -17,26 +17,15 @@ int strength_level(string pwd){
 
 int check(string password){
     int k=0;
-    while(true){
-        if(Account::arr[k]=="Account ID:"+to_string(Account::account_id)){
-            if(Account::arr[k+5]=="Password:"+password){
-                cout<<"Login successful."<<endl;
-                return 0;
-                break;
-            }
-            else{
-                cout<<"Incorrect password or account id try again.. "<<endl;
-                return 1;
-                cout<<"Do you want to try again? (y/n): ";
-                char ch;
-                cin>>ch;
-                if(ch=='y' || ch=='n'){
-                    continue;
-                }
-                else{
-                    break;
-                }
-            }
+    for(k=0;k<=Account::i;k=k+7){
+        if(Account::arr[k]==string("Account ID:") + to_string(Account::account_id) && Account::arr[k+5]==string("Password:") + password){
+            cout<<"Login successful."<<endl;
+            return 0;
+            break;
         }
     }
-} 
+    cout<<"Incorrect password or Account ID."<<endl;
+    return 1;
+}
+
+

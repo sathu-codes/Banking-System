@@ -1,8 +1,13 @@
+#ifndef ACCOUND_H
+#define ACCOUND_H
+
+
 #include <string>
 #include <fstream>
 #include <vector>
 
 using namespace std;
+
 
 class Account{
     public:
@@ -13,10 +18,10 @@ class Account{
         string firstname;
         string lastname;
         string fullname;
-        string phone_number;
+        int phone_number;
         string NIC_number;
-        string ethnicity;
-        Account(){}
+        string nationality;
+        Account();
         /*Account(string firstname, string lastname, string phone_number, string NIC_number, string ethnicity, string password){
             this->firstname = firstname;
             this->lastname = lastname;
@@ -25,10 +30,13 @@ class Account{
         }*/
         void name_assign();
         void nic_check(string NIC_number);
-        void phone_number_check(string phone_number);
+        void phone_number_check(int phone_number);
         void password_check(string password);
         void update_details(int account_id);
         void delete_account(int account_id);
-        int account_id_assign();
-        void account_details();
+        void account_id_assign();
+        void account_make();
+        void account_view(int account_id);
 };
+
+#endif
