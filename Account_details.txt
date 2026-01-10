@@ -1,12 +1,12 @@
 Account ID:1000
-Full Name: john
+Full Name: john john
 Phone Number:+94 777 999 777
 NIC Number:000000000000
 Nationality:Sri Lankan
 Password:0987654321
 
 Account ID:1001
-Full Name: sathu
+Full Name: albert john
 Phone Number:071 234 5678
 NIC Number:000000000001
 Nationality:Sri Lankan
