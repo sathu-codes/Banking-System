@@ -18,13 +18,15 @@ int main(){
     cout << "5. Perform Transactions" << endl;
     cout << "Enter your choice: ";
     cin >> choice;
+    cin.ignore(1000,'\n');
     if(choice==1){
 
-        cout<<"Enter your first name: ";
+        cout<<"Enter your first name: "<<endl;
         getline(cin,acc.firstname);
-        cin.ignore(1000,'\n');
-        cout<<"Enter your last name: ";
+
+        cout<<"Enter your last name: "<<endl;
         getline(cin,acc.lastname);
+
         acc.name_assign();
 
         cout<<"Enter your phone number: ";
@@ -34,16 +36,16 @@ int main(){
         cout<<"Enter your NIC number: ";
         cin>>acc.NIC_number;
         acc.nic_check(acc.NIC_number);
-
+        cin.ignore(1000,'\n');
         cout<<"Enter your Nationality: ";
         getline(cin,acc.nationality);
-        cin.ignore(1000,'\n');
+
         cout<<"Create a password: ";
         cin>>acc.password;
 
         acc.password_check(acc.password);
-         acc.account_id_assign();
-         acc.account_make();
+        acc.account_id_assign();
+        acc.account_make();
         //Account acc(acc.firstname,acc.lastname,acc.phone_number,acc.NIC_number,acc.ethnicity,acc.password);
         
     }
