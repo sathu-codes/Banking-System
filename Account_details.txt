@@ -26,3 +26,10 @@ NIC Number:314131413
 Nationality:Japanese
 Password:31414564738374189472
 
+Account ID:1004
+Full Name:sathu sathu
+Phone Number:31111
+NIC Number:1331
+Nationality:Japanese
+Password:0000000000000000000
+
