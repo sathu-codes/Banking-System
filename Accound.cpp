@@ -34,7 +34,7 @@ void Account::nic_check(string NIC_number){
     fstream file("Account_details.txt",ios::in);
     int c=3;
     while(c<=i){
-        if(arr[c]=="NIC Number:"+NIC_number){
+        if(arr[c]==string("NIC Number:")+NIC_number){
             cout<<"You already have an account"<<endl;
             cout<<"This is our existing account details:"<<endl;
             /*for(int j=0;c<c+3;j++){
