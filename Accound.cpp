@@ -108,7 +108,7 @@ void Account::account_id_assign(){
 
 void Account::update_details(int account_id){   
     int a=0;
-    while(a<=i){
+    while(a<i){
         if(arr[a]==string("Account ID:") + to_string(account_id)){
             break;
         }
@@ -144,7 +144,7 @@ void Account::update_details(int account_id){
                 cout<<"Enter new phone number: ";
                 cin>>phone_number;
                 phone_number_check(phone_number);
-                arr[a+2]="Phone Number:"+phone_number;
+                arr[a+2]=string("Phone Number:")+to_string(phone_number);
             }
             else if(choice==3){
                 cout<<"Enter new NIC number: ";
@@ -175,7 +175,7 @@ void Account::update_details(int account_id){
             }
             else{
                 fstream file("Account_details.txt",ios::out);
-                for(int f=0;f<=i;f++){
+                for(int f=0;f<i;f++){
                     file<<arr[f]<<endl;
                 }
                 cout<<"Details updated successfully."<<endl;
@@ -195,18 +195,18 @@ void Account::delete_account(int account_id){
         int d=0;
         int e=0;
         vector <string> temp_arr;
-        while(d<=i){
-            if(arr[d]=="Account ID:"+to_string(account_id)){
+        while(d<i){
+            if(arr[d]==string("Account ID:")+to_string(account_id)){
                 d=d+7;
             }
             else{
                 temp_arr.push_back(arr[d]);
                 d++;
+                e++;
             }
-            e++;
         }
         fstream file("Account_details.txt",ios::out);
-        for(int f=0;f<=e;f++){
+        for(int f=0;f<e;f++){
                 file<<temp_arr[f]<<endl;
         }
         file.close();
@@ -227,7 +227,7 @@ void Account::account_make(){
     arr.push_back(string("Full Name:") + fullname + "\n");
     arr.push_back(string("Phone Number:") + to_string(phone_number) + "\n");
     arr.push_back(string("NIC Number:") + NIC_number + "\n");
-    arr.push_back(string("Nationality") + nationality + "\n");
+    arr.push_back(string("Nationality:") + nationality + "\n");
     arr.push_back(string("Password:") + password + "\n");
     arr.push_back(string("")+"\n");
     i=i+7;
