@@ -12,3 +12,17 @@ NIC Number:000000000001
 Nationality:Sri Lankan
 Password:0987654321
 
+Account ID:1002
+Full Name: cina
+Phone Number:13131
+NIC Number:31131
+Nationality
+Password:0301303101313
+
+Account ID:1003
+Full Name:sathu smith
+Phone Number:31313131
+NIC Number:314131413
+Nationality:Japanese
+Password:31414564738374189472
+
